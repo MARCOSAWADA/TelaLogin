@@ -6,7 +6,7 @@
     <title>TELA LOGIN TURMA 140</title>
 </head>
 <body>
-    <ins><h1><mark>TELA LOGIN</mark></h1></ins>
+    <h1><mark><font color="green">TELA LOGIN</font></mark></h1>
     <form method="post">
         <label>Usuário:</label><br>
         <input type="email" name="email" placeholder="Digite o email do usuario."><br><br>

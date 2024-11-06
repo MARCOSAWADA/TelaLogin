@@ -11,9 +11,9 @@
     <title>TELA CADASTRO</title>
 </head>
 <body>
-    <h1><mark><b>TELA DE CADASTRO DE USUÁRIO</b></mark></h1>
+    <h1><mark><b><font color="green">TELA DE CADASTRO DE USUÁRIO</font></b></mark></h1>
     <form method="post">
-        <label><font color="red">Nome:</font></label><br>
+        <label>Nome:</label><br>
         <input type="text" name="nome" placeholder="Digite o nome completo"><br><br>
         <label>E-mail:</label><br>
         <input type="email" name="email" placeholder="Digite o e-mail"><br><br>
@@ -26,7 +26,7 @@
         
         <input type="submit" value="CADASTRAR"><br>
 
-        <p>Já cadastrado? Clique <a href="login.php"><mark>aqui</mark></a> para acessar.</p>
+        <p>Já cadastrado? Clique <a href="login.php"><mark>AQUI</mark></a> para acessar.</p>
     </form>
 
         <!-- isset = se existe -->
