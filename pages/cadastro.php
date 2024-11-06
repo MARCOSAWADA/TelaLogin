@@ -11,7 +11,7 @@
     <title>TELA CADASTRO</title>
 </head>
 <body>
-    <h1><ins><mark><b>TELA DE CADASTRO DE USUÁRIO</b></mark></h1></ins>
+    <h1><mark><b>TELA DE CADASTRO DE USUÁRIO</b></mark></h1>
     <form method="post">
         <label><font color="red">Nome:</font></label><br>
         <input type="text" name="nome" placeholder="Digite o nome completo"><br><br>
