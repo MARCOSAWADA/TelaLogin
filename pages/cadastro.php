@@ -1,3 +1,5 @@
+<!-- http://localhost/aulaphp140/TelaLogin/pages/cadastro.php -->
+
 <?php
     require_once '../classes/usuario.php';
     $usuario = new Usuario();
@@ -26,7 +28,7 @@
         
         <input type="submit" value="CADASTRAR"><br>
 
-        <p>Já cadastrado? Clique <a href="login.php"><mark>AQUI</mark></a> para acessar.</p>
+        <p>Já cadastrado&#10067; Clique <a href="login.php">&#10145;&#65039;<mark>AQUI</mark></a>&#11013;&#65039; para acessar.</p>
     </form>
 
         <!-- isset = se existe -->
@@ -74,8 +76,8 @@
             {
                 ?>
                     <div class="msg-erro">
-                    <font color="red"><p>Preencha todos os campos.</p></font>
-                    </div
+                    <h1><font color="red"><p>Preencha todos os campos.</p></font>
+                    </div>
                 <?php
             }
         }

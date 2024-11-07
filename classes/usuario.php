@@ -1,3 +1,5 @@
+<!-- http://localhost/AulaPHP140/TelaLogin/classes/usuario.php -->
+
 <?php
 
     Class usuario
