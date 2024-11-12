@@ -2,7 +2,7 @@
 
 <?php
 
-    Class usuario
+    Class Usuario
     {
         private $pdo;
         public $msgErro = "";
@@ -26,6 +26,8 @@
             global $pdo;
 
             //verificar se ja existe um e-mail cadastrado
+            // o :e é um apelido para chamar ele, neste caso :e para e-mail / :t para telefone / :n para nome
+
             $sql = $pdo->prepare("SELECT id_usuario from usuario WHERE email= :e");
             $sql->bindValue(":e",$email);
             $sql->execute();

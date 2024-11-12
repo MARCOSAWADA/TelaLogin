@@ -40,8 +40,9 @@
             $telefone = $_POST['telefone'];
             $senha = $_POST['senha'];
             $confirmarSenha = addslashes($_POST['confSenha']);
+            // addslashes = os dados inseridos nesta barra ele não envia para o banco de dados, ele é usado somente para usar verificar se repete o que foi digitado.
 
-            if(!empty($nome) && !empty($email) && !empty($telefone) && !empty($confirmarSenha))
+            if(!empty($nome) && !empty($email) && !empty($telefone) && !empty($senha) && !empty($confirmarSenha))
             {
                 $usuario->conectar("cadastro140", "localhost", "root", "");
                 if($usuario->msgErro == "")
@@ -52,8 +53,16 @@
                         {
                             ?>
                             <div class="msg-sucesso">
-                                <font color="red"><p>Cadastro realizado com sucesso.</p></font>
+                                <!-- <font color="red"><p>Cadastro realizado com sucesso.</p></font> -->
+                                <script> alert("Cadastro realizado com sucesso.")</script>
                                 <p>Clique aqui para <a href="login.php">logar.</a></p>
+                            </div>
+                        <?php
+                        }
+                        else{
+                            ?>
+                            <div class="msg-erro">
+                            <script> alert("usuario já cadastrado")</script>
                             </div>
                         <?php
                         }
@@ -62,15 +71,15 @@
                     {
                         ?>
                         <div class="msg-erro">
-                            <?php echo "ERROOOOOOOOOOOOO: ".$usuario->msgErro; ?>
+                            <?php echo "ERROOOOOOOOOOOOO ".$usuario->msgErro; ?>
                         </div>
                         <?php  
                     }
                 }
-                else
-                {
+                // else
+                // {
                     
-                }
+                // }
             }
             else
             {
