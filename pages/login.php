@@ -1,3 +1,12 @@
+<!-- http://localhost/aulaphp140/TelaLogin/pages/login.php -->
+
+<?php
+    require_once '../classes/usuario.php';
+    $usuario = new usuario();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,5 +27,49 @@
         
 
     </form>
+    <?php
+    if(isset($_POST['email']))
+    {
+        $email = addslashes($_POST['email']);
+        $senha = addslashes($_POST['senha']);
+        if(!empty($email) && !empty($senha))
+        {
+            $usuario->conectar("cadastro140", "localhost", "root", "");
+            if($usuario->msgErro == "")
+            {
+                if($usuario->logar($email, $senha))
+                {
+                    header("location: areaRestrita.php");
+                }
+                else
+                {
+                    ?>
+                        <div class="msgErro">
+                            <p> USUÁRIO NÃO CADASTRADO OU DADOS INCORRETOS.</p>
+                        </div>
+                    <?php
+                }
+            }
+            else
+            {
+                ?>
+                    <div class="msgErro">
+                        <?php echo "ERRO: " .$usuario->msgErro; ?>
+                    </div>
+                <?php
+            }
+        }
+        else
+        {
+            ?>
+                <div class="msg-erro">
+                    <p>PREENCHA TODOS OS CAMPOS</p>
+                </div>
+
+            <?php
+        }
+    }
+    ?>
+
 </body>
 </html>
