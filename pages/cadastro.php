@@ -77,7 +77,7 @@
                 ?>
                     <div class="msg-erro">
                     <font color="red"><p>Preencha todos os campos.</p></font>
-                    </div
+                    </div>
                 <?php
             }
         }

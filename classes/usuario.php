@@ -1,6 +1,6 @@
 <?php
 
-    Class usuario
+    Class Usuario
     {
         private $pdo;
         public $msgErro = "";
