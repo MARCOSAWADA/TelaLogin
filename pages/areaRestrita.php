@@ -37,6 +37,19 @@
                 <td><?php echo $dados['nome'] ?></td>
                 <td><?php echo $dados['email'] ?></td>
                 <td><?php echo $dados['telefone'] ?></td>
+    <!-- 03/12________________________________________________-->
+    <!-- hidden = Esconder -->
+                <td>
+                    <form action="editarUsuario.php" method="post">
+                        <input type="hidden" name="id_usuario" value="<?php echo $dados ['id_usuario']; ?>">    
+                        <input type="submit" value="Editar">
+                    </form>
+                    
+                    <form action="excluirUsuario.php" method="post">
+                    <input type="hidden" name="id_usuario" value="<?php echo $dados ['id_usuario']; ?>">
+                    <input type="submit" value="Excluir">
+                    </form>
+                </td>
             </tr>
             <?php
                 endforeach;

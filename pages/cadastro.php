@@ -1,5 +1,7 @@
 <!-- http://localhost/aulaphp140/TelaLogin/pages/cadastro.php -->
 
+
+
 <?php
     require_once '../classes/usuario.php';
     $usuario = new Usuario();
